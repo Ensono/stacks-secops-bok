@@ -1,0 +1,14 @@
+@import "theme-relearn-light.css";
+
+:root {
+  --PRIMARY-color: #6941eb;
+  --SECONDARY-color: #fff;
+  --MENU-HOME-LINK-color: #fff;
+}
+
+h1.sidebar-title {
+  margin: 0;
+  font-size: large;
+  font-weight: 500;
+  color: var(--MENU-HOME-LINK-color);
+}
