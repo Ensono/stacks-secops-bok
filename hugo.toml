@@ -12,6 +12,7 @@ title = 'Ensono Stacks SecOps Body of Knowledge'
   disableOpenapi = false
   editURL = 'https://github.com/Ensono/stacks-secops-bok/edit/main/content/${FilePath}'
   themeVariant = [ 'auto', 'ensono-light', 'ensono-dark' ]
+  disableExplicitIndexURLs = true
 
 [parms.author]
   name = 'Ensono Digital'
