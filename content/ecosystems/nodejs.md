@@ -52,12 +52,9 @@ nvm install
 
 #### Install Hooks
 
-Some projects will have [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) setup to enforce code style, spelling and commit messages. To configure this it's normally important to run any `prepare` scripts referenced in `package.json`:
+Some projects will have [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) setup to enforce code style, spelling and commit messages. To configure this it's important that the `prepare` scripts referenced in `package.json` executes, check the output of `npm install` and the contents of `package.json` and if required execute the script with:
 
-`npm run prepare`
-
-> [!NOTE]
-> The exact naming of the scripts can vary, it's worth checking the `$.scripts` object in `package.json` for each project to understand what scripts may be required to configure a development environment.
+`npm run {{ Insert Setup Script Name Here }}`
 
 ### Update Packages
 
