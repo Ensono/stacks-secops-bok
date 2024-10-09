@@ -7,12 +7,12 @@ weight = 2
 This document was born out of the need by Ensono Digital Site Reliability Engineering to manage vulnerabilities across the Ensono Stacks repository set, therefore it is limited to the repositories and technologies listed below. The applicability of the approaches and techniques involved may trivially be applied to other repositories using the same technology, and by definition any repository based upon an Ensono Stacks repository.
 
 | Repository | Technologies | Dependabot | SonarCloud |
-| ---------- | ------------ | ---------- | ---------- |
-| [stacks-dotnet](https://github.com/Ensono/stacks-dotnet) | {{< logo-dotnet >}} | | |
-| [stacks-java-module-parent](https://github.com/Ensono/stacks-java-module-parent) | | | |
-| [stacks-nx-plugins](https://github.com/Ensono/stacks-nx-plugins) | | | |
-| [stacks-data](https://github.com/Ensono/stacks-data) | | | |
-| [stacks-docker-images](https://github.com/Ensono/stacks-docker-images) | | | |
+| ---------- | :----------: | :--------: | :--------: |
+| [stacks-dotnet](https://github.com/Ensono/stacks-dotnet) | {{< logo-dotnet >}} | {{< tick >}} | {{< tick >}} |
+| [stacks-java-module-parent](https://github.com/Ensono/stacks-java-module-parent) | {{< logo-jdk >}} | {{< tick >}} | {{< tick >}} |
+| [stacks-nx-plugins](https://github.com/Ensono/stacks-nx-plugins) | {{< logo-js >}} | {{< tick >}} | {{< tick >}} |
+| [stacks-data](https://github.com/Ensono/stacks-data) | {{< logo-python >}} | {{< tick >}} |  |
+| [stacks-docker-images](https://github.com/Ensono/stacks-docker-images) | {{< logo-docker >}} | {{< tick >}} | |
 | [stacks-pipeline-templates](https://github.com/Ensono/stacks-pipeline-templates) | | | |
 | [stacks-cli](https://github.com/Ensono/stacks-cli) | | | |
 | [stacks-infrastructure-aca](https://github.com/Ensono/stacks-infrastructure-aca) | | | |
