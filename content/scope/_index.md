@@ -13,16 +13,16 @@ This document was born out of the need by Ensono Digital Site Reliability Engine
 | [stacks-nx-plugins](https://github.com/Ensono/stacks-nx-plugins) | {{< logo-js >}} | {{< tick >}} | {{< tick >}} |
 | [stacks-data](https://github.com/Ensono/stacks-data) | {{< logo-python >}} | {{< tick >}} |  |
 | [stacks-docker-images](https://github.com/Ensono/stacks-docker-images) | {{< logo-docker >}} | {{< tick >}} | |
-| [stacks-infrastructure-aca](https://github.com/Ensono/stacks-infrastructure-aca) | | | |
-| [stacks-java](https://github.com/Ensono/stacks-java) | | | |
-| [stacks-infrastructure-eks](https://github.com/Ensono/stacks-infrastructure-eks) | | | |
-| [stacks-terraform](https://github.com/Ensono/stacks-terraform) | | | |
-| [stacks-nx](https://github.com/Ensono/stacks-nx) | | | |
-| [stacks-infrastructure-aks](https://github.com/Ensono/stacks-infrastructure-aks) | | | |
-| [terraform-azurerm-cdn-frontdoor-stacks](https://github.com/Ensono/terraform-azurerm-cdn-frontdoor-stacks) | | | |
-| [stacks-infrastructure-afd](https://github.com/Ensono/stacks-infrastructure-afd) | | | |
-| [stacks-project-template](https://github.com/Ensono/stacks-project-template) | | | |
-| [stacks-ancillary-resources](https://github.com/Ensono/stacks-ancillary-resources) | | | |
+| [stacks-pipeline-templates](https://github.com/Ensono/stacks-pipeline-templates) | {{< logo-azdo >}} | {{< tick >}} | |
+| [stacks-cli](https://github.com/Ensono/stacks-cli) | {{< logo-go >}} | {{< tick >}} | |
+| [stacks-infrastructure-aca](https://github.com/Ensono/stacks-infrastructure-aca) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-java](https://github.com/Ensono/stacks-java) | {{< logo-jdk >}} | {{< tick >}} | {{< tick >}} |
+| [stacks-infrastructure-eks](https://github.com/Ensono/stacks-infrastructure-eks) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-terraform](https://github.com/Ensono/stacks-terraform) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-nx](https://github.com/Ensono/stacks-nx) | {{< logo-js >}} | {{< tick >}} | |
+| [stacks-infrastructure-aks](https://github.com/Ensono/stacks-infrastructure-aks) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-project-template](https://github.com/Ensono/stacks-project-template) | N/A | {{< tick >}} | |
+| [stacks-ancillary-resources](https://github.com/Ensono/stacks-ancillary-resources) | {{< logo-tf >}} | {{< tick >}} | |
 | [stacks-infrastructure-aci](https://github.com/Ensono/stacks-infrastructure-aci) | | | |
 | [stacks-azure-data](https://github.com/Ensono/stacks-azure-data) | | | |
 | [stacks-data-azure-public](https://github.com/Ensono/stacks-data-azure-public) | | | |
