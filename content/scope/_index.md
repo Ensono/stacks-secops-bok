@@ -13,8 +13,6 @@ This document was born out of the need by Ensono Digital Site Reliability Engine
 | [stacks-nx-plugins](https://github.com/Ensono/stacks-nx-plugins) | {{< logo-js >}} | {{< tick >}} | {{< tick >}} |
 | [stacks-data](https://github.com/Ensono/stacks-data) | {{< logo-python >}} | {{< tick >}} |  |
 | [stacks-docker-images](https://github.com/Ensono/stacks-docker-images) | {{< logo-docker >}} | {{< tick >}} | |
-| [stacks-pipeline-templates](https://github.com/Ensono/stacks-pipeline-templates) | | | |
-| [stacks-cli](https://github.com/Ensono/stacks-cli) | | | |
 | [stacks-infrastructure-aca](https://github.com/Ensono/stacks-infrastructure-aca) | | | |
 | [stacks-java](https://github.com/Ensono/stacks-java) | | | |
 | [stacks-infrastructure-eks](https://github.com/Ensono/stacks-infrastructure-eks) | | | |
