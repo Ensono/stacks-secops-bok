@@ -7,9 +7,6 @@ title = 'Ensono Stacks SecOps Body of Knowledge'
     path = 'github.com/McShelby/hugo-theme-relearn'
 
 [params]
-  disableMermaid = false
-  disableMathJax = false
-  disableOpenapi = false
   editURL = 'https://github.com/Ensono/stacks-secops-bok/edit/main/content/${FilePath}'
   themeVariant = [ 'auto', 'ensono-light', 'ensono-dark' ]
   disableExplicitIndexURLs = true
