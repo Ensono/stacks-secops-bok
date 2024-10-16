@@ -12,4 +12,4 @@ hugo serve
 
 ## Contributing
 
-Please do.
+New contributors are encouraged to read [Stacks Contributions](https://stacks.ensono.com/docs/contributions), this repository is a reference repository and as such additional perspectives are both encouraged and accepted.
