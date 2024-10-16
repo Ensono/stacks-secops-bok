@@ -26,7 +26,7 @@ This document was born out of the need by Ensono Digital Site Reliability Engine
 | [stacks-infrastructure-aks](https://github.com/Ensono/stacks-infrastructure-aks) | {{< logo-tf >}} | {{< tick >}} | |
 | [stacks-project-template](https://github.com/Ensono/stacks-project-template) | N/A | {{< tick >}} | |
 | [stacks-ancillary-resources](https://github.com/Ensono/stacks-ancillary-resources) | {{< logo-tf >}} | {{< tick >}} | |
-| [stacks-infrastructure-aci](https://github.com/Ensono/stacks-infrastructure-aci) | | | |
+| [stacks-infrastructure-aci](https://github.com/Ensono/stacks-infrastructure-aci) | {{< logo-tf >}} | | |
 | [stacks-azure-data](https://github.com/Ensono/stacks-azure-data) | | | |
 | [stacks-data-azure-public](https://github.com/Ensono/stacks-data-azure-public) | | | |
 | [stacks-java-azure-cosmos](https://github.com/Ensono/stacks-java-azure-cosmos) | | | |
