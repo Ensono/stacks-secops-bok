@@ -26,31 +26,22 @@ This document was born out of the need by Ensono Digital Site Reliability Engine
 | [stacks-infrastructure-aks](https://github.com/Ensono/stacks-infrastructure-aks) | {{< logo-tf >}} | {{< tick >}} | |
 | [stacks-project-template](https://github.com/Ensono/stacks-project-template) | N/A | {{< tick >}} | |
 | [stacks-ancillary-resources](https://github.com/Ensono/stacks-ancillary-resources) | {{< logo-tf >}} | {{< tick >}} | |
-| [stacks-infrastructure-aci](https://github.com/Ensono/stacks-infrastructure-aci) | {{< logo-tf >}} | | |
-| [stacks-azure-data](https://github.com/Ensono/stacks-azure-data) | | | |
-| [stacks-data-azure-public](https://github.com/Ensono/stacks-data-azure-public) | | | |
-| [stacks-java-azure-cosmos](https://github.com/Ensono/stacks-java-azure-cosmos) | | | |
-| [stacks-java-aws-dynamodb](https://github.com/Ensono/stacks-java-aws-dynamodb) | | | |
-| [stacks-java-azure-servicebus](https://github.com/Ensono/stacks-java-azure-servicebus) | | | |
-| [stacks-java-core-messaging](https://github.com/Ensono/stacks-java-core-messaging) | | | |
-| [stacks-java-core-cqrs](https://github.com/Ensono/stacks-java-core-cqrs) | | | |
-| [stacks-java-core-commons](https://github.com/Ensono/stacks-java-core-commons) | | | |
-| [stacks-java-core-api](https://github.com/Ensono/stacks-java-core-api) | | | |
-| [stacks-aws](https://github.com/Ensono/stacks-aws) | | | |
-| [stacks-java-cqrs](https://github.com/Ensono/stacks-java-cqrs) | | | |
-| [stacks-java-cqrs-events](https://github.com/Ensono/stacks-java-cqrs-events) | | | |
-| [amido-stacks-redirect](https://github.com/Ensono/amido-stacks-redirect) | | | |
-| [stacks-performance-tests](https://github.com/Ensono/stacks-performance-tests) | | | |
-| [stacks-nextjs-federated-modules-example](https://github.com/Ensono/stacks-nextjs-federated-modules-example) | | | |
-| [htec-stacks-aks](https://github.com/Ensono/htec-stacks-aks) | | | |
-| [stacks-infrastructure-de](https://github.com/Ensono/stacks-infrastructure-de) | | | |
-| [stacks-dotnet-packages-dependencyinjection](https://github.com/Ensono/stacks-dotnet-packages-dependencyinjection) | | | |
-| [stacks-dotnet-packages-data-abstractions](https://github.com/Ensono/stacks-dotnet-packages-data-abstractions) | | | |
-| [stacks-java-aws-sqs](https://github.com/Ensono/stacks-java-aws-sqs) | | | |
-| [stacks-infrastructure-data](https://github.com/Ensono/stacks-infrastructure-data) | | | |
-| [stacks-envfile](https://github.com/Ensono/stacks-envfile) | | | |
-| [stacks-java-sample-cqrs](https://github.com/Ensono/stacks-java-sample-cqrs) | | | |
-| [stacks-java-sample-web-api](https://github.com/Ensono/stacks-java-sample-web-api) | | | |
-| [stacks-java-sample-cqrs-events](https://github.com/Ensono/stacks-java-sample-cqrs-events) | | | |
-| [stacks-dotnet-webapp-automation](https://github.com/Ensono/stacks-dotnet-webapp-automation) | | | |
-| [stacks-release-notes](https://github.com/Ensono/stacks-release-notes) | | | |
+| [stacks-infrastructure-aci](https://github.com/Ensono/stacks-infrastructure-aci) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-azure-data](https://github.com/Ensono/stacks-azure-data) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-data-azure-public](https://github.com/Ensono/stacks-data-azure-public) | {{< logo-tf >}} | {{< tick >}} | |
+| [stacks-java-azure-cosmos](https://github.com/Ensono/stacks-java-azure-cosmos) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-aws-dynamodb](https://github.com/Ensono/stacks-java-aws-dynamodb) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-azure-servicebus](https://github.com/Ensono/stacks-java-azure-servicebus) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-core-messaging](https://github.com/Ensono/stacks-java-core-messaging) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-core-cqrs](https://github.com/Ensono/stacks-java-core-cqrs) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-core-commons](https://github.com/Ensono/stacks-java-core-commons) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-core-api](https://github.com/Ensono/stacks-java-core-api) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-aws](https://github.com/Ensono/stacks-aws) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-java-cqrs](https://github.com/Ensono/stacks-java-cqrs) | {{< logo-jdk >}} | {{< tick >}} | {{< tick >}} |
+| [stacks-java-cqrs-events](https://github.com/Ensono/stacks-java-cqrs-events) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-performance-tests](https://github.com/Ensono/stacks-performance-tests) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-nextjs-federated-modules-example](https://github.com/Ensono/stacks-nextjs-federated-modules-example) | {{< logo-js >}} | {{< tick >}} | |
+| [stacks-java-aws-sqs](https://github.com/Ensono/stacks-java-aws-sqs) | {{< logo-jdk >}} | {{< tick >}} | |
+| [stacks-envfile](https://github.com/Ensono/stacks-envfile) | {{< logo-go >}} | {{< tick >}} | |
+| [stacks-dotnet-webapp-automation](https://github.com/Ensono/stacks-dotnet-webapp-automation) | {{< logo-dotnet >}} | {{< tick >}} | |
+| [stacks-release-notes](https://github.com/Ensono/stacks-release-notes) | {{< logo-pwsh >}} | {{< tick >}}| |
