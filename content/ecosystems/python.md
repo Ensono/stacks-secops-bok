@@ -62,10 +62,10 @@ This should result in all tests passing, and provides a baseline for upgrading p
 
 #### Upgrading packages with `poetry update`
 
-Poetry offers an `upgrade` command which does the equivalent of deleting `poetry.lock` and then running `poetry install`:
+Poetry offers an `update` sub-command which does the equivalent of deleting `poetry.lock` and then running `poetry install`:
 
 ```sh
-poetry upgrade
+poetry update
 ```
 
 This works because the default behaviour of Poetry is to install the latest version of a dependency, including transitive dependencies, that still matches the version specification. This means that 
