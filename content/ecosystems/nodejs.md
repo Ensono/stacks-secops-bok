@@ -62,6 +62,13 @@ Before updating packages it's worth running `npm install` followed by `npm test`
 
 ## Framework Specific Guidance
 
+### Next.js
+
+Next.js [provides a codemod](https://nextjs.org/docs/app/guides/upgrading/version-15) to upgrade between versions of Next.js.
+
+> [!TIP]
+> If you get a peer dependencies warning, you may need to upgrade `react` and `react-dom`.
+
 ### Nx
 
 Nx has a concept of [automated dependency updates](https://nx.dev/features/automate-updating-dependencies) which includes not only updating `package.json` and `package-lock.json` but additionally executing code migrations to modify code to account for breaking changes.
