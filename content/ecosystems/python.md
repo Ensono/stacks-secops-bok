@@ -18,16 +18,24 @@ Additionally `pipx` is one of the most common ways to [install Poetry](https://p
 
 #### Create a Virtual Environments
 
-> [!NOTE]
+> [!TIP]
 > These instructions describe how to install tools on a POSIX compliant operating system and shell, it's strongly advised that Windows Users install and use [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 It's advisable to run all `python` commands in a venv, this is especially important when working across many different projects.
 
+Create a directory to store `venvs` in:
+
 ```sh
-python -m venv ~/venv-stacks-data
+mkdir ~/.venvs
 ```
 
-This venv can be activated with:
+Create the `venv`:
+
+```sh
+python -m venv ~/.venvs/stacks-data
+```
+
+This `venv` can be activated with:
 
 ```sh
 source ~/venv-stacks-data/bin/activate
@@ -35,10 +43,33 @@ source ~/venv-stacks-data/bin/activate
 
 At this point the shell has an activated and isolated python install with the `python` binary available in the path.
 
+> [!IMPORTANT]
+> If you need a specific version of python then you will need to do some additional work to install the appropriate version of Python, the following instructions are for Debian-based Distributions (i.e. Debian, Ubuntu, Kali, etc.):
+>
+> Add the `deadsnakes` repository (old Python versions):
+>
+> ```sh
+> sudo add-apt-repository ppa:deadsnakes/ppa
+> ```
+>
+> Update apt and install packages, using python 3.10 as an example:
+>
+> ```sh
+> sudo apt update && sudo apt install -y python3.10 python3.10-venv
+> ```
+>
+> Create a `venv` using a named python version:
+>
+> ```sh
+> python3.10 -m venv ~/.venvs/stacks-data
+> ```
+>
+> You can source it in the same way as above
+
 #### Setup Development Environment
 
-> [!IMPORTANT]
-> If there is a `Makefile` or a `tasks.yaml` then the appropriate task should be executed using [GNU Make](https://www.gnu.org/software/make/) or [Taskctl](https://github.com/Ensono/taskctl) to execute setup commands. These tasks often include additional setup steps required to work with the project.
+> [!NOTE]
+> If there is a `Makefile`, `tasks.yaml` or `eirctl.yaml` then the appropriate task should be executed using [GNU Make](https://www.gnu.org/software/make/) or [eirctl](https://github.com/Ensono/eirctl) to execute setup commands. These tasks often include additional setup steps required to work with the project.
 
 Poetry can be installed with the following command:
 
@@ -54,7 +85,7 @@ poetry install
 
 If there is a `tests` folder you can run these with the following command:
 
-```sh 
+```sh
 poetry run python -m pytest tests
 ```
 
@@ -68,7 +99,9 @@ Poetry offers an `update` sub-command which does the equivalent of deleting `poe
 poetry update
 ```
 
-This works because the default behaviour of Poetry is to install the latest version of a dependency, including transitive dependencies, that still matches the version specification. This means that 
+This works because the default behaviour of Poetry is to install the latest version of a dependency, including transitive dependencies, that still matches the version specification.
+
+This means that:
 
 - If version `1.0.0` is installed initially, then `^1.0.0` will be listed in `pyproject.toml` and `1.0.0` will be listed in `poetry.lock`.
 - If version `1.0.1` is released later, then poetry will not automatically upgrade the project as `1.0.0` is specified in `poetry.lock`.
