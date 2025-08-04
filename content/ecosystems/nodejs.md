@@ -71,6 +71,9 @@ Next.js [provides a codemod](https://nextjs.org/docs/app/guides/upgrading/versio
 
 ### Nx
 
+> [!NOTE]
+> Ensono provides a [Migrate GitHub Action](https://github.com/Ensono/stacks-nx-plugins/blob/main/.github/workflows/migrate.yml) which will update Nx in `stacks-nx-plugins` on a weekly basis. These changes are surfaced to maintenance engineers as [Pull Requests on the stacks-nx-plugins](https://github.com/Ensono/stacks-nx-plugins/pulls) repository for review and merging.
+
 Nx has a concept of [automated dependency updates](https://nx.dev/features/automate-updating-dependencies) which includes not only updating `package.json` and `package-lock.json` but additionally executing code migrations to modify code to account for breaking changes.
 
 The first step is understanding the current version of `Nx`:
