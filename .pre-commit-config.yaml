@@ -1,0 +1,79 @@
+# Pre-commit configuration for Stacks SecOps BOK
+# See https://pre-commit.com for more information
+repos:
+  # General file formatting and security
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        args: ['--markdown-linebreak-ext=md']
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: ['--allow-multiple-documents']
+      - id: check-toml
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=1024']
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: detect-private-key
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+  # Markdown linting
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+        args: ['--fix']
+        exclude: '^content/_index\.md$'
+
+  # YAML formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0
+    hooks:
+      - id: prettier
+        types_or: [yaml, json]
+        exclude: 'go\.sum$'
+
+  # Security scanning for secrets
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: '.*/tests/.*|.*\.lock$|.*\.sum$'
+
+  # Go module validation (for Hugo theme)
+  - repo: https://github.com/dnephin/pre-commit-golang
+    rev: v0.5.1
+    hooks:
+      - id: go-mod-tidy
+      - id: go-fmt
+        exclude: '^(?!.*\.go$).*$'
+
+  # Spell checking
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        args: [
+          '--skip=*.sum,*.lock,public/*,resources/*',
+          '--ignore-words-list=nd,aks,aci,aca'
+        ]
+
+  # Hugo validation
+  - repo: local
+    hooks:
+      - id: hugo-check
+        name: Hugo Configuration Check
+        entry: hugo check
+        language: system
+        files: '^(hugo\.toml|config\.toml|config\.yaml|content/.*\.md)$'
+        pass_filenames: false
+
+# Configuration
+default_install_hook_types: [pre-commit, commit-msg, pre-push]
+default_stages: [pre-commit]
+fail_fast: false

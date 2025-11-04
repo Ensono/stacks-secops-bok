@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "budparr.language-hugo-vscode",
+    "yzhang.markdown-all-in-one",
+    "DavidAnson.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+    "streetsidesoftware.code-spell-checker",
+    "GitHub.vscode-github-actions",
+    "ms-vscode.vscode-json",
+    "formulahendry.auto-rename-tag",
+    "bierner.markdown-mermaid"
+  ]
+}

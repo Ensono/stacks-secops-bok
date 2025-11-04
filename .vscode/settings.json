@@ -1,0 +1,36 @@
+{
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "markdown.validate.enabled": true,
+  "markdown.preview.breaks": true,
+  "markdownlint.config": {
+    "MD033": false,
+    "MD041": false
+  },
+  "yaml.validate": true,
+  "yaml.format.enable": true,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml",
+    "https://json.schemastore.org/dependabot-2.0.json": ".github/dependabot.yml"
+  },
+  "cSpell.words": [
+    "Ensono",
+    "SecOps",
+    "Hugo",
+    "Relearn",
+    "OWASP",
+    "dependabot",
+    "shortcodes",
+    "archetype",
+    "frontmatter"
+  ],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "explicit"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "git.inputValidationLength": 72,
+  "git.inputValidationSubjectLength": 50
+}

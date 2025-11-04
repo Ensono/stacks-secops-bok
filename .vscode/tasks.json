@@ -1,0 +1,104 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Hugo: Serve",
+      "type": "shell",
+      "command": "hugo",
+      "args": ["serve", "--buildDrafts", "--buildFuture"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "detail": "Start Hugo development server with draft and future content"
+    },
+    {
+      "label": "Hugo: Build",
+      "type": "shell",
+      "command": "hugo",
+      "args": ["--minify"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "Build the Hugo site with minification"
+    },
+    {
+      "label": "Hugo: Clean",
+      "type": "shell",
+      "command": "rm",
+      "args": ["-rf", "public/"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "detail": "Clean the public directory"
+    },
+    {
+      "label": "Hugo: New Post",
+      "type": "shell",
+      "command": "hugo",
+      "args": ["new", "${input:postPath}"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "detail": "Create a new Hugo content file"
+    },
+    {
+      "label": "Hugo: Check",
+      "type": "shell",
+      "command": "hugo",
+      "args": ["check"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "Check Hugo configuration and content"
+    },
+    {
+      "label": "Go: Update Hugo Theme",
+      "type": "shell",
+      "command": "go",
+      "args": ["get", "-u", "github.com/McShelby/hugo-theme-relearn"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "detail": "Update the Hugo Relearn theme dependency"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "postPath",
+      "description": "Content path (e.g., posts/my-new-post.md)",
+      "default": "posts/new-post.md",
+      "type": "promptString"
+    }
+  ]
+}
