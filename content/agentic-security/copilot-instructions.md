@@ -7,7 +7,7 @@ weight = 4.2
 
 GitHub Copilot Instructions (`.github/copilot-instructions.md`) provide context-aware guidance to AI coding assistants, enabling them to understand your project's architecture, conventions, and requirements. When properly configured with security guidelines, copilot instructions become a powerful tool for maintaining code quality and security posture across your codebase.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Copilot instructions should **complement**, not replace, security policies. Always pair project-specific instructions with comprehensive security guidelines like those in `copilot-security-instructions.md`.
 
 ## When to Create Copilot Instructions
@@ -39,7 +39,7 @@ A well-structured copilot-instructions.md file should include:
 
 From this project's own `copilot-instructions.md`:
 
-```markdown
+````markdown
 # Copilot Instructions for [Project Name]
 
 ## Project Overview
@@ -51,27 +51,34 @@ This is a **Hugo-based documentation site** for [purpose].
 ## Architecture & Structure
 
 ### Content Organization
+
 - `content/`: [Description]
 - Use **[key pattern]** for [purpose]
 
 ### Key Patterns
+
 - [Pattern 1]: [Explanation]
 - [Pattern 2]: [Explanation]
 
 ## Development Workflow
 
 ### Local Development
+
 ```bash
 hugo serve  # Start development server
 ```
+````
 
 ### Deployment
+
 - [Deployment process description]
 
 ## Custom Elements
+
 - [Custom component 1]
 - [Custom component 2]
-```
+
+````
 
 ## Integrating Security Guidelines
 
@@ -94,16 +101,16 @@ This separation provides:
 Include a prominent security notice in your copilot-instructions.md:
 
 ```markdown
-> **Security Notice**: This project [security context statement]. 
-> When working with this codebase, always follow the comprehensive security 
+> **Security Notice**: This project [security context statement].
+> When working with this codebase, always follow the comprehensive security
 > guidelines in [`copilot-security-instructions.md`](./copilot-security-instructions.md).
-```
+````
 
 **Example from this project:**
 
 ```markdown
-> **Security Notice**: This project documents security operations practices. 
-> When working with this codebase, always follow the comprehensive security 
+> **Security Notice**: This project documents security operations practices.
+> When working with this codebase, always follow the comprehensive security
 > guidelines in [`copilot-security-instructions.md`](./copilot-security-instructions.md).
 ```
 
@@ -118,6 +125,7 @@ Within your copilot instructions, reference specific security requirements where
 - Uses Hugo Extended v0.152.3 with Dart Sass for CSS processing
 
 **Security Requirements:**
+
 - All commits must be GPG signed (see `copilot-security-instructions.md` §1)
 - Use feature branches and pull requests for protected branches (see §2)
 - Follow change control for production configurations (see §3)
@@ -130,11 +138,13 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 1. GPG Commit Signing Requirements
 
 **Mandatory behaviors:**
+
 - Never disable, bypass, or suggest disabling GPG signing
 - Never use flags like `--no-gpg-sign`, `-n`, or `git config commit.gpgsign false`
 - Always preserve existing GPG signing configurations
 
 **Failure handling:**
+
 - Halt operations immediately if signing fails
 - Provide specific diagnostic commands (not workarounds)
 - Wait for user confirmation before retrying
@@ -142,12 +152,14 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 2. Branch Protection and Pull Request Requirements
 
 **Mandatory behaviors:**
+
 - Never suggest force pushing to protected branches
 - Never bypass branch protection rules
 - Never commit directly to protected branches
 - Always follow standard SDLC workflows
 
 **Required workflow:**
+
 1. Create feature branch with descriptive naming
 2. Implement changes on feature branch
 3. Create Pull Request with detailed description
@@ -158,12 +170,14 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 3. Production Configuration Change Control
 
 **Mandatory behaviors:**
+
 - Never make direct changes to production configurations
 - Never skip change control processes
 - Always follow formal Change Management process
 - Always assist in producing required documentation
 
 **Change control process:**
+
 1. Document change request with risk assessment
 2. Validate in non-production environments
 3. Obtain required approvals
@@ -173,6 +187,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 4. Authentication and Authorization Controls
 
 **Prohibited actions:**
+
 - Disabling authentication mechanisms
 - Removing authorization checks
 - Hard-coding credentials or bypassing credential management
@@ -180,6 +195,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 - Creating overly permissive access policies
 
 **Required approaches:**
+
 - Use established authentication middleware
 - Implement proper authorization checks
 - Secure credential management via environment variables/secrets managers
@@ -189,6 +205,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 5. Security Standards Compliance
 
 **Applicable standards:**
+
 - ISO 27001:2013 - Information Security Management
 - NIST SP 800-53 - Security and Privacy Controls
 - FIPS 140-2/140-3 - Cryptographic Standards
@@ -199,6 +216,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 - GDPR - Data Protection Regulation
 
 **Automatic compliance scanning:**
+
 - Cryptographic standards violations (FIPS, ISO 27001)
 - Data protection violations (PCI DSS, GDPR)
 - Injection vulnerabilities (OWASP Top 10, NIST)
@@ -208,11 +226,13 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 6. Audit and Logging Requirements
 
 **Mandatory behaviors:**
+
 - Always include audit logging for security-relevant actions
 - Never suggest disabling or circumventing audit logs
 - Always log to immutable storage where available
 
 **Required audit events:**
+
 - Authentication: login, logout, failed_login, password_change
 - Authorization: access_granted, access_denied, privilege_escalation
 - Data access: read_sensitive, update_sensitive, delete_data, export_data
@@ -222,6 +242,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 7. Incident Response
 
 **Required process when security incidents occur:**
+
 1. Declare incident to Security Team
 2. Activate Incident Response Plan
 3. Obtain emergency change approval
@@ -230,6 +251,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 6. Schedule post-incident review
 
 **Prohibited actions:**
+
 - Bypassing security controls during incidents
 - Skipping approval processes
 - Implementing insecure workarounds
@@ -237,6 +259,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 8. Code Review Checklist
 
 **Pre-submission verification:**
+
 - No security controls disabled or bypassed
 - No hard-coded credentials or secrets
 - No weak cryptographic algorithms
@@ -255,6 +278,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 9. Security Documentation Requirements
 
 **Required documentation for code changes:**
+
 1. Security Impact Statement (authentication, authorization, data protection, audit logging, compliance)
 2. Threat Model Considerations (mitigated threats, new attack surfaces, security assumptions)
 3. Compliance Mapping (satisfied standards, implemented controls, audit evidence)
@@ -262,6 +286,7 @@ The `copilot-security-instructions.md` file should establish mandatory security 
 ### 10. Escalation Procedures
 
 **When users insist on bypassing security controls:**
+
 - Document the violation attempts
 - Explain required approvals (CISO, risk acceptance, compensating controls)
 - Note conversation may be subject to security audit
@@ -276,15 +301,17 @@ This documentation site uses both instruction files to guide AI agents:
 
 **Focus:** Hugo-specific technical guidance
 
-```markdown
+````markdown
 ## Architecture & Structure
 
 ### Content Organization
+
 - `content/`: Hugo content with **front matter weights** for ordering
 - Use **archetype** front matter: `"home"`, `"chapter"` for section indexes
 - Nested structure: `basics/`, `ecosystems/`, `scope/` with `_index.md` files
 
 ### Key Patterns
+
 - **Hugo shortcodes** in `layouts/shortcodes/`: Use `{{< logo-jdk >}}`, `{{< tick >}}`
 - **Custom themes** in `assets/css/`: `theme-ensono-light.css` override Relearn defaults
 - **Markdown extensions**: Use Hugo alerts syntax `> [!INFO]`, `> [!IMPORTANT]`
@@ -292,14 +319,18 @@ This documentation site uses both instruction files to guide AI agents:
 ## Development Workflow
 
 ### Local Development
+
 ```bash
 hugo serve  # Start development server
 ```
+````
 
 ### Content Creation
+
 - New pages need proper front matter with `title`, `weight`, `archetype`
 - Use relative weights (e.g., 3.1, 3.2, 3.3) for ordering within sections
-```
+
+````
 
 ### copilot-security-instructions.md (600+ lines)
 
@@ -310,8 +341,8 @@ hugo serve  # Start development server
 
 ## Core Security Principles
 
-GitHub Copilot MUST operate within established security controls and 
-compliance frameworks. Under NO circumstances should Copilot suggest, 
+GitHub Copilot MUST operate within established security controls and
+compliance frameworks. Under NO circumstances should Copilot suggest,
 implement, or assist in circumventing security measures.
 
 ## 1. GPG Commit Signing Requirements
@@ -322,7 +353,7 @@ implement, or assist in circumventing security measures.
 - **ALWAYS** preserve existing GPG signing configurations
 
 [600+ more lines of detailed security requirements]
-```
+````
 
 ### How They Work Together
 
@@ -356,12 +387,14 @@ Agent (applies copilot-security-instructions.md):
 ### Keep Instructions Focused
 
 **Do:**
+
 - ✅ Document project-specific patterns and conventions
 - ✅ Explain architectural decisions and structure
 - ✅ Provide examples of common tasks
 - ✅ Reference security instructions for comprehensive policies
 
 **Don't:**
+
 - ❌ Duplicate security policies in both files
 - ❌ Include overly detailed API documentation
 - ❌ Write instructions that conflict with security guidelines
@@ -370,12 +403,14 @@ Agent (applies copilot-security-instructions.md):
 ### Maintain Both Files
 
 **copilot-instructions.md updates when:**
+
 - Project architecture changes
 - New frameworks or tools are adopted
 - Conventions evolve
 - Custom components are added
 
 **copilot-security-instructions.md updates when:**
+
 - Security standards change
 - Compliance requirements update
 - New threats emerge
@@ -416,6 +451,7 @@ Treat copilot instructions as code:
 - Use **TypeScript** for type safety
 
 ### File Organization
+
 - `components/`: Reusable UI components
 - `containers/`: Connected components with business logic
 - `hooks/`: Custom React hooks
@@ -433,6 +469,7 @@ Treat copilot instructions as code:
 - Use **pathlib** instead of `os.path`
 
 ### Project Structure
+
 - `src/`: Source code modules
 - `tests/`: Unit and integration tests (pytest)
 - `docs/`: Sphinx documentation
@@ -454,16 +491,19 @@ For projects combining multiple technologies:
 ## Technology-Specific Guidance
 
 ### Django Backend
+
 - Use **class-based views** for complex logic
 - Implement **custom permissions** for authorization
 - Follow **12-factor app** configuration principles
 
 ### React Frontend
+
 - Use **React Query** for server state management
 - Implement **code splitting** for performance
 - Follow **accessibility best practices** (WCAG 2.1 AA)
 
 ### Integration Points
+
 - Backend exposes **REST API** at `/api/v1/`
 - Frontend uses **JWT tokens** for authentication
 - WebSocket connections via **Django Channels** for real-time features

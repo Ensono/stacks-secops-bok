@@ -196,18 +196,21 @@ MCP servers are configured through the `.vscode/mcp.json` file in your workspace
 When configuring MCP servers, consider the following security practices:
 
 1. **Credential Management**
+
    - Use `"password": true` for sensitive inputs to mask them in the UI
    - Store credentials in environment variables or secrets managers
    - Configure credential rotation policies
    - Audit credential usage regularly
 
 2. **Scope Limitation**
+
    - Grant MCP servers minimum required permissions
    - Use read-only access where possible
    - Limit server access to specific organizations or repositories
    - Review and remove unused MCP server configurations
 
 3. **Network Security**
+
    - Ensure MCP servers connect over HTTPS
    - Verify SSL/TLS certificates are valid
    - Consider network egress controls for sensitive environments

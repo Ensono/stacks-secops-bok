@@ -7,7 +7,7 @@ weight = 4.3
 
 Dependency management is a critical security practice that traditionally requires significant manual effort: researching updates, reading changelogs, testing changes, and coordinating deployments. Agentic coding with AI assistants and MCP servers transforms this into an assisted, systematic process that maintains security while reducing toil.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Agentic dependency management doesn't remove human oversight - it enhances decision-making with automation, research, and validation. Always review AI-suggested changes before committing.
 
 ## The Agentic Approach
@@ -118,7 +118,7 @@ This project's dependencies were recently updated using the agentic approach. He
 **User request:**
 
 ```text
-"Can you use the MCP servers and review the content of this repository 
+"Can you use the MCP servers and review the content of this repository
 updating any dependencies to their latest version?"
 ```
 
@@ -246,7 +246,7 @@ Hugo:
 
 GitHub Actions:
 - actions/checkout: v4 → v5
-- actions/configure-pages: v4 → v5  
+- actions/configure-pages: v4 → v5
 - actions/upload-pages-artifact: v3 → v4
 - All actions maintain backward compatibility
 
@@ -262,7 +262,7 @@ Hugo Theme:
 
 Testing:
 - ✅ Pre-commit hooks validated successfully
-- ✅ Hugo build completes without errors  
+- ✅ Hugo build completes without errors
 - ✅ All shortcodes and custom themes render correctly
 - ✅ GitHub Actions workflow syntax validated
 
@@ -311,7 +311,7 @@ AI workflow:
 **Responding to vulnerability disclosures:**
 
 ```text
-User: "CVE-2024-XXXXX was just published affecting [dependency]. 
+User: "CVE-2024-XXXXX was just published affecting [dependency].
        Please patch it."
 
 AI workflow:
@@ -425,12 +425,12 @@ updates:
 
 4. AI generates review comment:
    "✅ Safe to merge
-   
+
    - No breaking changes affecting our usage
    - No known CVEs
    - Test suite passes
    - Release notes reviewed: [summary]
-   
+
    Recommendation: Approve and merge"
 ```
 
@@ -490,12 +490,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      
+
       - name: Check for vulnerabilities
         run: |
           # AI-generated script checks all dependencies
           python scripts/vulnerability_scan.py
-          
+
       - name: Create issues for CVEs
         if: failure()
         uses: actions/github-script@v7
