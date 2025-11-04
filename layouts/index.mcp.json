@@ -1,17 +1,11 @@
-{
-    {- $pages := where .Site.RegularPages "Section""!=""" -
-    }
-}
-{
-    {- $sections := .Site.Sections -
-    }
-}
+{{- $pages := where .Site.RegularPages "Section" "!=" "" -}}
+{{- $sections := .Site.Sections -}}
 {
     "version": "1.0.0",
     "name": "{{ .Site.Title }}",
     "description": "Ensono Stacks Security Operations Body of Knowledge - MCP-compatible documentation index",
     "baseURL": "{{ .Site.BaseURL }}",
-    "generatedAt": "{{ now.Format "2006-01-02T15: 04: 05Z07: 00" }}",
+    "generatedAt": "{{ now.Format "2006-01-02T15:04:05Z07:00" }}",
     "capabilities": {
         "search": true,
         "browse": true,
@@ -29,167 +23,65 @@
         ]
     },
     "sections": [
+        {{- $sectionCount := len $sections -}}
+        {{- range $index, $section := $sections -}}
         {
-            {- $sectionCount := len $sections -
-            }
-        }
-    {
-            {- range $index, $section := $sections -
-            }
-        }
-    {
             "id": "{{ $section.Section }}",
             "title": "{{ $section.Title }}",
             "path": "{{ $section.RelPermalink }}",
-            "weight": {
-                { $section.Weight
-                }
-            },
-            "description": {
-                { if $section.Description
-                }
-            }"{{ $section.Description }}"{
-                { else
-                }
-            }"{{ $section.Summary | plainify }}"{
-                { end
-                }
-            },
+            "weight": {{ $section.Weight }},
+            "description": {{ if $section.Description }}"{{ $section.Description }}"{{ else }}"{{ $section.Summary | plainify }}"{{ end }},
             "pages": [
+                {{- $sectionPages := where $pages "Section" $section.Section -}}
+                {{- $pageCount := len $sectionPages -}}
+                {{- range $pindex, $page := $sectionPages -}}
                 {
-                    {- $sectionPages := where $pages "Section" $section.Section -
-                    }
-                }
-        {
-                    {- $pageCount := len $sectionPages -
-                    }
-                }
-        {
-                    {- range $pindex, $page := $sectionPages -
-                    }
-                }
-        {
                     "id": "{{ md5 $page.Permalink }}",
                     "title": "{{ $page.Title }}",
                     "path": "{{ $page.RelPermalink }}",
                     "url": "{{ $page.Permalink }}",
-                    "weight": {
-                        { $page.Weight
-                        }
-                    },
+                    "weight": {{ $page.Weight }},
                     "summary": "{{ $page.Summary | plainify | truncate 200 }}",
                     "keywords": [
-                        {
-                            {- if $page.Params.tags -
-                            }
-                        }
-              {
-                            {- range $tindex, $tag := $page.Params.tags -
-                            }
-                        }
-                "{{ $tag }}"{
-                            { if ne $tindex (sub (len $page.Params.tags) 1)
-                            }
-                        },
-                        {
-                            { end
-                            }
-                        }
-              {
-                            {- end -
-                            }
-                        }
-            {
-                            {- else -
-                            }
-                        }
-              "{{ $section.Section }}"{
-                            {- end -
-                            }
-                        }
+                        {{- if $page.Params.tags -}}
+                        {{- range $tindex, $tag := $page.Params.tags -}}
+                        "{{ $tag }}"{{- if ne $tindex (sub (len $page.Params.tags) 1) -}},{{- end -}}
+                        {{- end -}}
+                        {{- else -}}
+                        "{{ $section.Section }}"
+                        {{- end -}}
                     ],
                     "content": {
-                        "wordCount": {
-                            { $page.WordCount
-                            }
-                        },
-                        "readingTime": {
-                            { $page.ReadingTime
-                            }
-                        },
-                        "plainText": {
-                            { $page.Plain | jsonify
-                            }
-                        }
+                        "wordCount": {{ $page.WordCount }},
+                        "readingTime": {{ $page.ReadingTime }},
+                        "plainText": {{ $page.Plain | jsonify }}
                     },
                     "metadata": {
                         "section": "{{ $section.Title }}",
-                        "lastModified": "{{ $page.Lastmod.Format "2006-01-02T15: 04: 05Z07: 00" }}",
-                        "publishDate": "{{ $page.PublishDate.Format "2006-01-02T15: 04: 05Z07: 00" }}"
+                        "lastModified": "{{ $page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+                        "publishDate": "{{ $page.PublishDate.Format "2006-01-02T15:04:05Z07:00" }}"
                     }
-                }{
-                    { if ne $pindex (sub $pageCount 1)
-                    }
-                },
-                {
-                    { end
-                    }
-                }
-        {
-                    {- end -
-                    }
-                }
+                }{{- if ne $pindex (sub $pageCount 1) -}},{{- end -}}
+                {{- end }}
             ]
-        }{
-            { if ne $index (sub $sectionCount 1)
-            }
-        },
-        {
-            { end
-            }
-        }
-    {
-            {- end -
-            }
-        }
+        }{{- if ne $index (sub $sectionCount 1) -}},{{- end -}}
+        {{- end }}
     ],
     "searchIndex": {
         "description": "Searchable content from Stacks SecOps BOK",
         "entries": [
+            {{- $allPages := $pages -}}
+            {{- $entryCount := len $allPages -}}
+            {{- range $eindex, $page := $allPages -}}
             {
-                {- $allPages := $pages -
-                }
-            }
-      {
-                {- $entryCount := len $allPages -
-                }
-            }
-      {
-                {- range $eindex, $page := $allPages -
-                }
-            }
-      {
                 "id": "{{ md5 $page.Permalink }}",
                 "title": "{{ $page.Title }}",
                 "section": "{{ $page.Section }}",
                 "url": "{{ $page.Permalink }}",
-                "content": {
-                    { $page.Plain | jsonify
-                    }
-                },
-                "keywords": "{{ delimit (union (slice $page.Section $page.Title) (default slice $page.Params.tags)) "" }}"
-            }{
-                { if ne $eindex (sub $entryCount 1)
-                }
-            },
-            {
-                { end
-                }
-            }
-      {
-                {- end -
-                }
-            }
+                "content": {{ $page.Plain | jsonify }},
+                "keywords": "{{ delimit (union (slice $page.Section $page.Title) (default slice $page.Params.tags)) " " }}"
+            }{{- if ne $eindex (sub $entryCount 1) -}},{{- end -}}
+            {{- end }}
         ]
     },
     "tools": {

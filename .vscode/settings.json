@@ -32,5 +32,8 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "git.inputValidationLength": 72,
-  "git.inputValidationSubjectLength": 50
+  "git.inputValidationSubjectLength": 50,
+  "[mcp.json]": {
+    "editor.formatOnSave": false
+  }
 }
