@@ -13,3 +13,16 @@ title = 'Ensono Stacks SecOps Body of Knowledge'
 
 [parms.author]
   name = 'Ensono Digital'
+
+[outputs]
+  home = ["HTML", "RSS", "MCP"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[outputFormats.MCP]
+  name = "MCP"
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = true
+  notAlternative = false
+  path = "mcp"
