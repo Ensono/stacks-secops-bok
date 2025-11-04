@@ -15,15 +15,16 @@
     "https://json.schemastore.org/dependabot-2.0.json": ".github/dependabot.yml"
   },
   "cSpell.words": [
-    "Ensono",
-    "SecOps",
-    "Hugo",
-    "Relearn",
-    "OWASP",
-    "dependabot",
-    "shortcodes",
+    "agentic",
     "archetype",
-    "frontmatter"
+    "dependabot",
+    "Ensono",
+    "frontmatter",
+    "Hugo",
+    "OWASP",
+    "Relearn",
+    "SecOps",
+    "shortcodes"
   ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {

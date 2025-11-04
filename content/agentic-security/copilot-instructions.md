@@ -67,7 +67,6 @@ This is a **Hugo-based documentation site** for [purpose].
 ```bash
 hugo serve  # Start development server
 ```
-````
 
 ### Deployment
 
@@ -523,6 +522,6 @@ Your copilot instructions are effective when:
 ## Further Resources
 
 - **GitHub Copilot Documentation**: [docs.github.com/copilot](https://docs.github.com/copilot)
-- **Security Best Practices**: See [`copilot-security-instructions.md`](./copilot-security-instructions.md)
+- **Security Best Practices**: See [`copilot-security-instructions.md`](https://github.com/Ensono/stacks-secops-bok/blob/main/.github/copilot-security-instructions.md)
 - **MCP Servers**: See [MCP Servers](./mcp-servers.md) for AI-assisted research and automation
 - **Dependency Management**: See [Dependency Management](./dependency-management.md) for agentic update workflows

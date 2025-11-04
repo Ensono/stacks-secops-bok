@@ -24,4 +24,6 @@ When implementing agentic coding for security operations, the following principl
 3. **Audit and Transparency** - All agentic actions should be auditable, with clear commit messages and change documentation
 4. **Human Oversight** - AI agents augment human decision-making but don't replace security team approval processes
 
+## Further Reading
+
 {{% children sort="weight" %}}
