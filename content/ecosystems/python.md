@@ -38,7 +38,7 @@ python -m venv ~/.venvs/stacks-data
 This `venv` can be activated with:
 
 ```sh
-source ~/venv-stacks-data/bin/activate
+source ~/.venvs/stacks-data/bin/activate
 ```
 
 At this point the shell has an activated and isolated python install with the `python` binary available in the path.
